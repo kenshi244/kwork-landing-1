@@ -1,0 +1,130 @@
+// Variables
+$blue: rgba(0,92,157,255)
+$white: rgba(255, 255, 255, 255)
+
+body
+    background: $blue
+    height: 100%
+
+h1
+    color: $white
+    font-family: 'Montserrat', sans-serif
+    font-weight: 300
+    font-size: 20px
+    margin: 30px 0
+
+.header
+    display: flex
+    justify-content: center
+    flex-direction: column
+
+    &__main
+        margin: 50px 0 0 0
+        h2
+            color: $white
+            font-family: 'Source Sans Pro', sans-serif
+            font-weight: 500
+            font-size: 100px
+            white-space: nowrap
+            margin: 20px 0
+            text-align: center
+        .search-container
+            display: flex
+            flex-direction: column
+            align-items: start
+            width: 60%
+            margin: 0 auto
+        .search
+            position: relative
+            width: 100%
+            margin: 0 auto
+            box-shadow: 0 0 40px rgba(51, 51, 51, .1)
+
+            input
+                height: 60px
+                text-indent: 25px
+                border: 2px solid #d6d4d4
+
+                &:focus
+                    box-shadow: none
+                    border: 2px solid $blue
+
+            .fa-search
+                position: absolute
+                top: 23px
+                left: 15px
+
+            button
+                position: absolute
+                top: 5px
+                right: 5px
+                height: 50px
+                width: 110px
+                background: blue
+        .checkboxes
+            .checkbox
+                margin: 2px
+                .checkbox-label
+                    &>input
+                        position: absolute
+                        z-index: -1
+                        opacity: 0
+                        transition: all .4s ease-in
+
+                    &>span
+                        user-select: none
+                        color: $white
+                        font-family: 'Montserrat', sans-serif
+                        font-weight: 300
+                        font-size: 13px
+
+                    &>span::before
+                        content: ''
+                        display: inline-block
+                        width: 1em
+                        height: 1em
+                        border: 1px solid #adb5bd
+                        border-radius: 0.25em
+                        margin-right: 0.5em
+                        background-repeat: no-repeat
+                        background-position: center center
+                        background-size: 50% 50%
+
+                    &>input:not(:disabled):not(:checked)+span:hover::before
+                        border-color: #629de0
+
+                    &>input:not(:disabled):active+span::before
+                        background-color: #629de0
+                        border-color: #629de0
+
+                    &>input:focus+span::before
+                        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+
+                    &>input:focus:not(:checked)+span::before
+                        border-color: #80bdff
+
+                    &>input:checked+span::before
+                        border-color: #0b76ef
+                        background-color: #0b76ef
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+
+                    &>input:disabled+span::before
+                        background-color: #e9ecef
+
+    &__footer
+        margin: 110px 0 0 0
+        h3
+            color: $white
+            font-family: 'Montserrat', sans-serif
+            font-weight: 300
+            font-size: 17px
+        &__down-arrow
+            display: flex
+            justify-content: center
+            .arrow
+                border: solid $white
+                border-width: 0 6px 6px 0
+                display: inline-block
+                padding: 15px
+                &-down
+                    transform: rotate(45deg)
