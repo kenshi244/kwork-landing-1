@@ -29,6 +29,16 @@ h1 a:hover {
   color: #acb8d3;
 }
 
+.search__results__container.active .search__results {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search__results__container.active .search__results li {
+  display: block;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,6 +164,32 @@ h1 a:hover {
   background: #005c9d;
   text-transform: uppercase;
   line-height: 0px;
+}
+
+.header__main .search__results {
+  background: white;
+  max-height: 280px;
+  overflow-y: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.header__main .search__results li {
+  display: none;
+  color: #000;
+  list-style-type: none;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  -webkit-transition: .2s all ease-in;
+  transition: .2s all ease-in;
+}
+
+.header__main .search__results li:hover {
+  background-color: #efefef;
 }
 
 .header__main .checkboxes .checkbox {
