@@ -1,7 +1,7 @@
 let list = "";
 
 let xhr = new XMLHttpRequest();
-xhr.open("GET", "../files/list.txt", false);
+xhr.open("GET", "files/list.txt", false);
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
         list = xhr.responseText.split("\r\n");
