@@ -26,17 +26,19 @@ h1
 
 .header
     display: flex
-    justify-content: center
+    justify-content: flex-start
     flex-direction: column
     height: 100vh
 
     &__header
+        flex: 0 1 auto
         display: flex
         .logo__container
             img
                 max-width: 200px
 
     &__main
+        flex: 1 1 auto
         margin: 100px 0 0 0
         h2
             color: $white
@@ -146,6 +148,7 @@ h1
 
     &__footer
         margin: 110px 0 0 0
+        flex: 0 0 auto
         h3
             color: $white
             font-family: "Calibri"
@@ -163,7 +166,8 @@ h1
                     transform: rotate(45deg)
 
 .main
-    height: 100vh
+    & > div
+        height: 100vh
     h2
         color: $white
         text-align: left
@@ -171,6 +175,7 @@ h1
         font-size: 7vw
 
     &__blocks-container
+        flex: 1 1 auto
         padding: 20px 0 0 20%
 
     &__block
@@ -182,6 +187,8 @@ h1
         font-size: 22px
 
     &__footer
+        flex: 0 0 auto
+        padding: 10px 0
         h3
             color: $white
             font-family: "Calibri"
