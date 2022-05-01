@@ -1,10 +1,13 @@
 // Variables
 $blue: rgba(0,92,157,255)
 $white: rgba(255, 255, 255, 255)
+html
+    scroll-behavior: smooth
 
 body
     background: $blue
     height: 100%
+    font-family: "Calibri"
 
 h1
     display: inline-block
@@ -38,7 +41,7 @@ h1
             color: $white
             font-family: "Calibri"
             font-weight: 500
-            font-size: 125px
+            font-size: 10vw
             white-space: nowrap
             margin: 20px 0
             text-align: center
@@ -46,7 +49,7 @@ h1
             display: flex
             flex-direction: column
             align-items: start
-            width: 60%
+            width: 71vw
             margin: 0 auto
         .search
             position: relative
@@ -55,7 +58,7 @@ h1
             box-shadow: 0 0 40px rgba(51, 51, 51, .1)
 
             input
-                height: 50px
+                height: 56px
                 font-size: 22px
                 border-radius: 0
                 border: none
@@ -77,7 +80,7 @@ h1
 
             button
                 position: absolute
-                top: 2px
+                top: 5px
                 right: 4px
                 border-radius: 10px
                 height: 46px
@@ -141,7 +144,7 @@ h1
                         background-color: #e9ecef
 
     &__footer
-        margin: 160px 0 0 0
+        margin: 110px 0 0 0
         h3
             color: $white
             font-family: "Calibri"
@@ -157,3 +160,54 @@ h1
                 padding: 15px
                 &-down
                     transform: rotate(45deg)
+
+.main
+    height: 100vh
+    h2
+        color: $white
+        text-align: left
+        padding: 30px 0 0 20%
+        font-size: 7vw
+
+    &__blocks-container
+        padding: 20px 0 0 20%
+
+    &__block
+        background: $white
+        color: $blue
+        margin: 10px 0
+        min-height: 120px
+        padding: 10px 15px
+        font-size: 22px
+
+    &__footer
+        h3
+            color: $white
+            font-family: "Calibri"
+            font-weight: 300
+            font-size: 17px
+            margin: 30px 0 10px 0
+
+.about
+    height: 100vh
+    h2
+        color: $white
+        text-align: center
+        font-size: 7vw
+        padding: 40px 0
+    &__text
+        p
+            color: $white
+            font-size: 18px
+            line-height: 20px
+            font-family: "Calibri"
+            font-weight: 350
+            text-align: justify
+        a
+            color: $white
+            text-decoration: none
+
+    &__footer
+        padding: 70px 0
+        text-align: center
+        color: $white

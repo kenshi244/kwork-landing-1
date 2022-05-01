@@ -1,6 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #005c9d;
   height: 100%;
+  font-family: "Calibri";
 }
 
 h1 {
@@ -55,7 +60,7 @@ h1 a:hover {
   color: white;
   font-family: "Calibri";
   font-weight: 500;
-  font-size: 125px;
+  font-size: 10vw;
   white-space: nowrap;
   margin: 20px 0;
   text-align: center;
@@ -72,7 +77,7 @@ h1 a:hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  width: 60%;
+  width: 71vw;
   margin: 0 auto;
 }
 
@@ -85,7 +90,7 @@ h1 a:hover {
 }
 
 .header__main .search input {
-  height: 50px;
+  height: 56px;
   font-size: 22px;
   border-radius: 0;
   border: none;
@@ -133,7 +138,7 @@ h1 a:hover {
 
 .header__main .search button {
   position: absolute;
-  top: 2px;
+  top: 5px;
   right: 4px;
   border-radius: 10px;
   height: 46px;
@@ -215,7 +220,7 @@ h1 a:hover {
 }
 
 .header__footer {
-  margin: 160px 0 0 0;
+  margin: 110px 0 0 0;
 }
 
 .header__footer h3 {
@@ -244,5 +249,68 @@ h1 a:hover {
 .header__footer__down-arrow .arrow-down {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.main {
+  height: 100vh;
+}
+
+.main h2 {
+  color: white;
+  text-align: left;
+  padding: 30px 0 0 20%;
+  font-size: 7vw;
+}
+
+.main__blocks-container {
+  padding: 20px 0 0 20%;
+}
+
+.main__block {
+  background: white;
+  color: #005c9d;
+  margin: 10px 0;
+  min-height: 120px;
+  padding: 10px 15px;
+  font-size: 22px;
+}
+
+.main__footer h3 {
+  color: white;
+  font-family: "Calibri";
+  font-weight: 300;
+  font-size: 17px;
+  margin: 30px 0 10px 0;
+}
+
+.about {
+  height: 100vh;
+}
+
+.about h2 {
+  color: white;
+  text-align: center;
+  font-size: 7vw;
+  padding: 40px 0;
+}
+
+.about__text p {
+  color: white;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Calibri";
+  font-weight: 350;
+  text-align: justify;
+}
+
+.about__text a {
+  color: white;
+  text-decoration: none;
+}
+
+.about__footer {
+  padding: 70px 0;
+  text-align: center;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */
