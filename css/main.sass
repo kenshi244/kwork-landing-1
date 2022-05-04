@@ -71,7 +71,6 @@ h1
 
     &__main
         flex: 1 1 auto
-        margin: 100px 0 0 0
         display: flex
         justify-content: center
         align-items: center
@@ -83,6 +82,9 @@ h1
             white-space: nowrap
             margin: 20px 0
             text-align: center
+            @media screen
+                @media (max-width: $md)
+                    font-size: 12.5vw
         .search-container
             display: flex
             flex-direction: column
@@ -221,7 +223,7 @@ h1
                         background-color: #e9ecef
 
     &__footer
-        margin: 110px 0 0 0
+        margin: 20px 0 0 0
         flex: 0 0 auto
         h3
             color: $white
