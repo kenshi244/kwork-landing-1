@@ -1,7 +1,8 @@
 // Variables
-$blue: rgba(0,92,157,255)
 $white: rgba(255, 255, 255, 255)
-$grey: #efefef
+$black: rgba(0, 0, 0, 255)
+$blue: rgba(0,92,157,255)
+$grey: rgba(239, 239, 239, 255)
 
 // BOOTSTRAP BREAKPOINTS
 // Breakpoint	        Class infix	    Dimensions
@@ -244,33 +245,80 @@ h1
 .main
     & > div
         height: 100vh
+        @media screen
+            @media (min-width: $xs)
+                height: inherit
     h2
         color: $white
-        text-align: left
-        padding: 30px 0 0 20%
-        font-size: 7vw
+        text-align: center
+        padding: 0 0 0 0
+        font-size: 12vw
+        margin: 15px 0
+        @media screen
+            @media (min-width: $sm)
+                font-size: 7vw
+            @media (min-width: $xl)
+                padding: 0 0 0 20%
+                text-align: left
 
     &__blocks-container
         flex: 1 1 auto
-        padding: 20px 0 0 20%
+        padding: 10px 0 0 0
+        @media screen
+            @media (min-width: $xl)
+                padding: 10px 0 0 20%
 
     &__block
         background: $white
         color: $blue
         margin: 10px 0
-        min-height: 120px
+        min-height: 130px
+
         padding: 10px 15px
         font-size: 22px
-
+        h3
+            text-transform: uppercase
+        ul
+            padding: 0 0 0 0
+            li
+                list-style-type: none
+                margin: 0
+                p
+                    &::before
+                        content: "— "
+        hr
+            margin: 0 0 15px 0
+        &__more
+            display: flex
+            align-items: flex-start
+            justify-content: baseline
+            cursor: pointer
+            h4
+                font-size: 20px
+                color: $black
+                align-self: flex-end
+            &__down-arrow
+                margin: 0 0 0 40px
+                align-self: end
+                .arrow
+                    border: solid $black
+                    border-width: 0 4px 4px 0
+                    display: inline-block
+                    padding: 15px
+                    &-down
+                        transform: rotate(45deg)
     &__footer
         flex: 0 0 auto
         padding: 10px 0
-        h3
+        @media screen
+            @media (max-width: $md)
+                margin: 30px 0
+        h4
             color: $white
             font-family: "Calibri"
             font-weight: 300
             font-size: 17px
-            margin: 30px 0 10px 0
+            margin: 0px 0 10px 0
 
 .about
     height: 100vh

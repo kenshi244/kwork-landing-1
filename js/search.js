@@ -309,9 +309,11 @@ let input = document.getElementsByTagName("input")[0];
 let button = document.getElementById("searchButton");
 
 input.addEventListener("input", function (event) {
+    document.getElementsByClassName("header")[0].style.height = "100vh";
     let enteredData = this.value;
     let searchArray = [];
     if (enteredData) {
+        
         searchArray = list.filter((data) => {
             return data.toLocaleLowerCase().includes(enteredData.toLocaleLowerCase());
         });
@@ -323,7 +325,7 @@ input.addEventListener("input", function (event) {
 
         let allList = document.querySelectorAll("li");
         for (let i = 0; i < allList.length; i++) {
-            allList[i].setAttribute("onclick", "setInForm(this)");
+            allList[i].setAttribute("onclick", "setInForm(this);");
         }
     } else {
         document.querySelector(".search__results__container").classList.remove("active");
@@ -334,14 +336,18 @@ function setInForm(element) {
     let selectData = element.textContent;
     input.value = selectData;
     document.querySelector(".search__results__container").classList.remove("active");
+    document.getElementsByClassName("header")[0].style.height = "100vh";
 }
 
 function show(searchList) {
     let listData;
     if (searchList.length) {
         listData = searchList.join("");
+        document.getElementsByClassName("header")[0].style.height = "135vh";
     } else {
         listData = "<li>" + input.value + "</li>";
+        
     }
     resultsDiv.innerHTML = listData;
+    
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
@@ -388,27 +389,113 @@ h1 a:hover {
   height: 100vh;
 }
 
+@media screen and (min-width: 320px) {
+  .main > div {
+    height: inherit;
+  }
+}
+
 .main h2 {
   color: white;
-  text-align: left;
-  padding: 30px 0 0 20%;
-  font-size: 7vw;
+  text-align: center;
+  padding: 0 0 0 0;
+  font-size: 12vw;
+  margin: 15px 0;
+}
+
+@media screen and (min-width: 576px) {
+  .main h2 {
+    font-size: 7vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main h2 {
+    padding: 0 0 0 20%;
+    text-align: left;
+  }
 }
 
 .main__blocks-container {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 20px 0 0 20%;
+  padding: 10px 0 0 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .main__blocks-container {
+    padding: 10px 0 0 20%;
+  }
 }
 
 .main__block {
   background: white;
   color: #005c9d;
   margin: 10px 0;
-  min-height: 120px;
+  min-height: 130px;
   padding: 10px 15px;
   font-size: 22px;
+}
+
+.main__block h3 {
+  text-transform: uppercase;
+}
+
+.main__block ul {
+  padding: 0 0 0 0;
+}
+
+.main__block ul li {
+  list-style-type: none;
+  margin: 0;
+}
+
+.main__block ul li p::before {
+  content: "— ";
+}
+
+.main__block hr {
+  margin: 0 0 15px 0;
+}
+
+.main__block__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  cursor: pointer;
+}
+
+.main__block__more h4 {
+  font-size: 20px;
+  color: black;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.main__block__more__down-arrow {
+  margin: 0 0 0 40px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.main__block__more__down-arrow .arrow {
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 15px;
+}
+
+.main__block__more__down-arrow .arrow-down {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .main__footer {
@@ -418,12 +505,18 @@ h1 a:hover {
   padding: 10px 0;
 }
 
-.main__footer h3 {
+@media screen and (max-width: 768px) {
+  .main__footer {
+    margin: 30px 0;
+  }
+}
+
+.main__footer h4 {
   color: white;
   font-family: "Calibri";
   font-weight: 300;
   font-size: 17px;
-  margin: 30px 0 10px 0;
+  margin: 0px 0 10px 0;
 }
 
 .about {
