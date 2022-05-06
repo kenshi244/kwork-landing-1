@@ -272,21 +272,29 @@ h1
         background: $white
         color: $blue
         margin: 10px 0
-        min-height: 130px
-
+        min-height: 340px
         padding: 10px 15px
         font-size: 22px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &__header
+            flex: 1 0 auto
+        &__footer
+            flex: 0 0 auto
         h3
             text-transform: uppercase
         ul
-            padding: 0 0 0 0
+            padding: 0
             li
                 list-style-type: none
                 margin: 0
+                cursor: pointer
                 p
                     &::before
                         content: "— "
         hr
+            min-height: 1px
             margin: 0 0 15px 0
         &__more
             display: flex

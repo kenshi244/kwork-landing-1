@@ -433,9 +433,31 @@ h1 a:hover {
   background: white;
   color: #005c9d;
   margin: 10px 0;
-  min-height: 130px;
+  min-height: 340px;
   padding: 10px 15px;
   font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__block__header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.main__block__footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .main__block h3 {
@@ -443,12 +465,13 @@ h1 a:hover {
 }
 
 .main__block ul {
-  padding: 0 0 0 0;
+  padding: 0;
 }
 
 .main__block ul li {
   list-style-type: none;
   margin: 0;
+  cursor: pointer;
 }
 
 .main__block ul li p::before {
@@ -456,6 +479,7 @@ h1 a:hover {
 }
 
 .main__block hr {
+  min-height: 1px;
   margin: 0 0 15px 0;
 }
 
