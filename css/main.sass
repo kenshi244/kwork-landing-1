@@ -93,6 +93,17 @@ h1
             @media screen
                 @media (max-width: $md)
                     font-size: 11vw
+            span
+                animation: blink 2.5s linear infinite
+
+            @keyframes blink
+                0%
+                    color: $white
+                50%
+                    color: rgba(255, 255, 255, 0)
+                100%
+                    color: $white
+
         .search-container
             display: flex
             flex-direction: column
@@ -279,7 +290,7 @@ h1
         background: $white
         color: $blue
         margin: 10px 0
-        min-height: 340px
+        min-height: 350px
         padding: 10px 15px
         font-size: 22px
         display: flex
@@ -310,18 +321,21 @@ h1
             cursor: pointer
             h4
                 font-size: 20px
-                color: $black
+                color: $blue
                 align-self: flex-end
             &__down-arrow
                 margin: 0 0 0 40px
                 align-self: end
                 .arrow
-                    border: solid $black
+                    border: solid $blue
                     border-width: 0 4px 4px 0
                     display: inline-block
                     padding: 15px
                     &-down
                         transform: rotate(45deg)
+                    &-up
+                        transform: rotate(224deg)
+                        vertical-align: text-top
     &__footer
         flex: 0 0 auto
         padding: 10px 0
